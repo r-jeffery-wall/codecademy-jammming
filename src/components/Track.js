@@ -5,7 +5,7 @@ function Track( props ) {
         <>
             <h4>{props.title}</h4>
             <h5>{props.artist}</h5>
-            {props.type == 'search' ? <button>+</button> : <button>-</button>}
+            {props.type === 'search' ? <button>+</button> : <button>-</button>}
         </>
     )    
 }

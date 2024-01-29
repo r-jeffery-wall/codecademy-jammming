@@ -12,17 +12,20 @@ function App() {
   const [ search, setSearch ] = useState();
    
 
-  return (
+  return ( 
     <>
       <div className='banner'>
-        <h1>Jammming</h1>
+        <h1>Ja<span className='green'>mmm</span>ing</h1>
+        <h2>A Spotify Playlist App</h2>
       </div>
       <div className='double-column'>
         <div className='search-container'>
           <SearchBar />
           <SearchResults results={searchResults} />
         </div>
-        <Playlist />
+        <div>
+          <Playlist />
+        </div>
       </div>
     </>
   );
