@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from '../styles/SearchBar.module.css';
 
 function SearchBar() {
    return (
     <>
-        <form>
-            <input type="text"></input>
-            <button type='submit'>Search</button>
+        <form className={styles.mainContainer + ' hoverScale'}>
+            <input type="text" className={styles.textInput}></input>
+            <button type='submit' className={styles.submitButton}>Search</button>
         </form>
     </>
    ) 

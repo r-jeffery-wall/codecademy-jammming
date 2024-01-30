@@ -1,0 +1,17 @@
+.mainContainer {
+    background-color: #110f24;
+    padding: 0.5rem;
+    border-radius: 15px;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.textInput {
+    border-radius: 15px;
+}
+
+.submitButton {
+    border-radius: 15px;
+    margin-left: 0.25rem;
+}

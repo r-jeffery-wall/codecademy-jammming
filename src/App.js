@@ -6,9 +6,9 @@ import Playlist from './components/Playlist';
 
 function App() {
   const [ searchResults, setSearchResults ] = useState([{
-    title: 'Search for songs',
-    artist: '',
-    album: ''
+    title: 'Felt Mountain',
+    artist: 'Goldfrapp',
+    album: 'Felt Mountain'
   }]);
   const [ search, setSearch ] = useState();
    

@@ -3,10 +3,10 @@ import Track from './Track';
 
 function TrackList( props ) {
    return (
-    <ul>
+    <ul> 
         {props.tracks.map(track => 
             <li>
-                <Track title={track.title} artist={track.artist} type={props.type} />
+                <Track title={track.title} artist={track.artist} album={track.album} type={props.type} />
             </li>
         )}
     </ul>

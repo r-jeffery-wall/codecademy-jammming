@@ -38,6 +38,7 @@ body {
   align-items: center;
   justify-content: space-around;
   margin-top: 17vh;
+  height: 100%;
 }
 
 .double-column div {
@@ -50,4 +51,32 @@ body {
   margin: 0 2rem;
   border-radius: 15px;
   border: 2px solid black;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  border-block-start: 1px solid grey;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+li {
+  width: 100%;
+  border-block-end: 1px solid grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hoverScale {
+  transition: all 0.25s;
+}
+
+.hoverScale:hover, .hoverScale:active {
+  transform: scale(1.1);
 }
