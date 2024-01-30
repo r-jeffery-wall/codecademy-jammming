@@ -7,7 +7,8 @@ import Playlist from './components/Playlist';
 function App() {
   const [ searchResults, setSearchResults ] = useState([{
     title: 'Search for songs',
-    artist: ''
+    artist: '',
+    album: ''
   }]);
   const [ search, setSearch ] = useState();
    

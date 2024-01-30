@@ -3,6 +3,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   font-size: 18px;
+  text-align: center;
 }
 
 .banner {
@@ -14,6 +15,17 @@ body {
   position: fixed;
   top: 0;
   border: 2px solid black;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.banner h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-style: italic;
 }
 
 .green {
