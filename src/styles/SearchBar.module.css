@@ -6,12 +6,3 @@
     display: flex;
     align-items: center;
 }
-
-.textInput {
-    border-radius: 15px;
-}
-
-.submitButton {
-    border-radius: 15px;
-    margin-left: 0.25rem;
-}

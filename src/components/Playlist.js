@@ -3,10 +3,13 @@ import TrackList from './Tracklist';
 
 function Playlist( props ) {
     return (
-        <form>
-            {props.tracks ? <TrackList tracks={props.tracks} type='playlist' /> : <p>Add songs to your playlist from the search results!</p>}
-            <button type="submit">Save Playlist</button>
-        </form>    
+        <>
+            {props.playlist ? <TrackList tracks={props.playlist.playlist} type='playlist' /> : <p>Add songs to your playlist from the search results!</p>}
+            <form>
+                <input type='text' value={props.playlist.name}></input>
+                <button type="submit" className='hoverScale'>Save Playlist</button>
+            </form>    
+        </>
     )
 }
 

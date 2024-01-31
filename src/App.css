@@ -41,7 +41,7 @@ body {
   height: 100%;
 }
 
-.double-column div {
+.column-div {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -52,6 +52,7 @@ body {
   border-radius: 15px;
   border: 2px solid black;
   height: 100%;
+  box-shadow: 4px 4px black;
 }
 
 ul {
@@ -80,3 +81,23 @@ li {
 .hoverScale:hover, .hoverScale:active {
   transform: scale(1.1);
 }
+
+form {
+  margin: 1rem 1rem;
+}
+
+button {
+  border-radius: 15px;
+  margin-left: 0.25rem;
+  font-size: 1.15rem;
+  color: white;
+  background-color: #42449C;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+}
+
+input {
+  border-radius: 15px;
+  box-shadow: 4px 4px black;
+}
+

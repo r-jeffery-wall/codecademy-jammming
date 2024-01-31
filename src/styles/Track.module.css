@@ -5,10 +5,11 @@
 }
  
 .infoContainer {
-    display: flex;
-    direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 40%;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     border: none !important;
     background: none !important;
     margin: 0 !important;

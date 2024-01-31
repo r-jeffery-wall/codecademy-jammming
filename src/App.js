@@ -9,8 +9,19 @@ function App() {
     title: 'Felt Mountain',
     artist: 'Goldfrapp',
     album: 'Felt Mountain'
+  },{
+    title: 'Banquet',
+    artist: 'Yann Tiersen',
+    album: 'Amelie from Montmarte'
   }]);
   const [ search, setSearch ] = useState();
+  const [ playlist, setPlaylist ] = useState({
+    name: 'Playlist name',
+    playlist: [{
+    title: 'Felt Mountain',
+    artist: 'Goldfrapp',
+    album: 'Felt Mountain'
+  }]});
    
 
   return ( 
@@ -20,12 +31,12 @@ function App() {
         <h2>A Spotify Playlist App</h2>
       </div>
       <div className='double-column'>
-        <div className='search-container'>
+        <div className='column-div'>
           <SearchBar />
           <SearchResults results={searchResults} />
         </div>
-        <div>
-          <Playlist />
+        <div className='column-div'>
+          <Playlist playlist={playlist}/>
         </div>
       </div>
     </>
