@@ -2,6 +2,14 @@ import React from 'react';
 import styles from '../styles/Track.module.css';
 
 function Track( props ) {
+    function handleAdd(event) {
+        props.AddToPlaylist(event)
+    }
+
+    function handleRemove(event) {
+        props.removeFromPlaylist(event);
+    }
+
     return (
         <>
             <div className={styles.infoContainer}>
@@ -9,7 +17,7 @@ function Track( props ) {
                 <h5 className={styles.artist}>{props.artist}</h5>
                 <p className={styles.album}>{props.album}</p>
             </div>
-            {props.type === 'search' ? <button className={styles.button + ' hoverScale'}>+</button> : <button className={styles.button + ' hoverScale'}>-</button>}
+            {props.type === 'search' ? <button className={styles.button + ' hoverScale'} onClick={handleAdd}>+</button> : <button className={styles.button + ' hoverScale'} onClick={handleRemove} >-</button>}
         </>
     )    
 }

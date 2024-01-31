@@ -4,7 +4,7 @@ import TrackList from './Tracklist';
 function SearchResults( props ) {
    return (
     <>
-        <TrackList tracks={props.results} type='search' />
+        <TrackList tracks={props.results} type='search' AddToPlaylist={props.AddToPlaylist} />
     </>
    ) 
 }

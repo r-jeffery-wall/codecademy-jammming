@@ -15,14 +15,22 @@ function App() {
     album: 'Amelie from Montmarte'
   }]);
   const [ search, setSearch ] = useState();
-  const [ playlist, setPlaylist ] = useState({
-    name: 'Playlist name',
-    playlist: [{
-    title: 'Felt Mountain',
-    artist: 'Goldfrapp',
-    album: 'Felt Mountain'
-  }]});
+  const [ playlist, setPlaylist ] = useState([]);
+  const [ playlistTitle, setPlaylistTitle ] = useState('Playlist name')
    
+  function AddToPlaylist(event) {
+    const trackTitle = event.target.parentElement.getAttribute('data-key');
+    const trackToAdd = searchResults.filter(track => track.title === trackTitle)[0];
+
+    setPlaylist((prev) => [trackToAdd, ...prev]);
+  }
+
+  function removeFromPlaylist(event) {
+    const trackTitle = event.target.parentElement.getAttribute('data-key');
+    const newPlaylist = playlist.filter(track => track.title !== trackTitle);
+
+    setPlaylist(newPlaylist);
+  }
 
   return ( 
     <>
@@ -33,10 +41,10 @@ function App() {
       <div className='double-column'>
         <div className='column-div'>
           <SearchBar />
-          <SearchResults results={searchResults} />
+          <SearchResults results={searchResults} AddToPlaylist={AddToPlaylist} />
         </div>
         <div className='column-div'>
-          <Playlist playlist={playlist}/>
+          <Playlist playlist={playlist} title={playlistTitle} removeFromPlaylist={removeFromPlaylist} />
         </div>
       </div>
     </>
