@@ -8,12 +8,15 @@ function App() {
   const [ searchResults, setSearchResults ] = useState([{
     title: 'Felt Mountain',
     artist: 'Goldfrapp',
-    album: 'Felt Mountain'
+    album: 'Felt Mountain',
+    uri: 'feltmountain'
   },{
     title: 'Banquet',
     artist: 'Yann Tiersen',
-    album: 'Amelie from Montmarte'
+    album: 'Amelie from Montmarte',
+    uri: 'banquet'
   }]);
+
   const [ search, setSearch ] = useState('Search here.');
   const [ playlist, setPlaylist ] = useState([]);
   const [ playlistTitle, setPlaylistTitle ] = useState('Playlist name')
@@ -40,6 +43,14 @@ function App() {
     setSearch(newSearch)
   }
 
+  function savePlaylist( playlist, playlistTitle) {
+    const playlistToSave = {
+      name: playlistTitle,
+      playlist: playlist.map(track => track.uri)
+    } 
+    console.log(playlistToSave); // unfinished - waiting for API integration.
+  }
+
   return ( 
     <>
       <div className='banner'>
@@ -52,7 +63,7 @@ function App() {
           <SearchResults results={searchResults} AddToPlaylist={AddToPlaylist} />
         </div>
         <div className='column-div'>
-          <Playlist playlist={playlist} title={playlistTitle} removeFromPlaylist={removeFromPlaylist} updatePlaylistTitle={updatePlaylistTitle} />
+          <Playlist playlist={playlist} title={playlistTitle} removeFromPlaylist={removeFromPlaylist} updatePlaylistTitle={updatePlaylistTitle} savePlaylist={savePlaylist} />
         </div>
       </div>
     </>
