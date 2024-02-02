@@ -51,6 +51,10 @@ function App() {
     console.log(playlistToSave); // unfinished - waiting for API integration.
   }
 
+  function handleSearch(searchTerm) { // Unfinished - waiting for API.
+    console.log(searchTerm);
+  }
+
   return ( 
     <>
       <div className='banner'>
@@ -59,7 +63,7 @@ function App() {
       </div>
       <div className='double-column'>
         <div className='column-div'>
-          <SearchBar search={search} updateSearch={updateSearch}/>
+          <SearchBar search={search} updateSearch={updateSearch} submitSearch={handleSearch} />
           <SearchResults results={searchResults} AddToPlaylist={AddToPlaylist} />
         </div>
         <div className='column-div'>
