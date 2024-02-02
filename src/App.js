@@ -14,7 +14,7 @@ function App() {
     artist: 'Yann Tiersen',
     album: 'Amelie from Montmarte'
   }]);
-  const [ search, setSearch ] = useState();
+  const [ search, setSearch ] = useState('Search here.');
   const [ playlist, setPlaylist ] = useState([]);
   const [ playlistTitle, setPlaylistTitle ] = useState('Playlist name')
    
@@ -31,6 +31,14 @@ function App() {
 
     setPlaylist(newPlaylist);
   }
+  
+  function updatePlaylistTitle(newTitle) {
+    setPlaylistTitle(newTitle);
+  }
+
+  function updateSearch(newSearch) {
+    setSearch(newSearch)
+  }
 
   return ( 
     <>
@@ -40,11 +48,11 @@ function App() {
       </div>
       <div className='double-column'>
         <div className='column-div'>
-          <SearchBar />
+          <SearchBar search={search} updateSearch={updateSearch}/>
           <SearchResults results={searchResults} AddToPlaylist={AddToPlaylist} />
         </div>
         <div className='column-div'>
-          <Playlist playlist={playlist} title={playlistTitle} removeFromPlaylist={removeFromPlaylist} />
+          <Playlist playlist={playlist} title={playlistTitle} removeFromPlaylist={removeFromPlaylist} updatePlaylistTitle={updatePlaylistTitle} />
         </div>
       </div>
     </>
