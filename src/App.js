@@ -3,19 +3,10 @@ import './App.css';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
 import Playlist from './components/Playlist';
+import Spotify from './util/Spotify';
 
 function App() {
-  const [ searchResults, setSearchResults ] = useState([{
-    title: 'Felt Mountain',
-    artist: 'Goldfrapp',
-    album: 'Felt Mountain',
-    uri: 'feltmountain'
-  },{
-    title: 'Banquet',
-    artist: 'Yann Tiersen',
-    album: 'Amelie from Montmarte',
-    uri: 'banquet'
-  }]);
+  const [ searchResults, setSearchResults ] = useState([]);
 
   const [ search, setSearch ] = useState('Search here.');
   const [ playlist, setPlaylist ] = useState([]);
@@ -52,8 +43,14 @@ function App() {
   }
 
   function handleSearch(searchTerm) { // Unfinished - waiting for API.
-    console.log(searchTerm);
-  }
+    
+    if (searchTerm === '' || searchTerm === 'Search here.' || searchTerm === 'You must specify a search term!') {
+      setSearch('You must specify a search term!');
+    }
+    else {
+      Spotify.searchTracks(searchTerm).then(setSearchResults);
+      console.log(searchResults);
+    }}
 
   return ( 
     <>

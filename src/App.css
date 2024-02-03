@@ -1,7 +1,7 @@
 body {
   background: url(./images/aleksandr-popov-JhYnL-BiP18-unsplash.jpg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 18px;
   text-align: center;
 }
@@ -20,6 +20,8 @@ body {
 .banner h1 {
   font-size: 3rem;
   margin-bottom: 0;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 2px;
 }
 
 .banner h2 {
@@ -29,13 +31,12 @@ body {
 }
 
 .green {
-  color: green;
+  color: rgb(12, 194, 12);
 }
 
 .double-column {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   margin-top: 17vh;
   height: 100%;
@@ -101,7 +102,7 @@ input {
   box-shadow: 4px 4px black;
 }
 
-#addSongs {
+p {
   font-size: 1.5rem;
   font-weight: bold;
 }

@@ -13,7 +13,7 @@ function Playlist( props ) {
 
     return (
         <>
-            {props.playlist.length !== 0 ? <TrackList tracks={props.playlist} type='playlist' removeFromPlaylist={props.removeFromPlaylist} /> : <p id='addSongs'>Add songs to your playlist from the search results!</p>}
+            {props.playlist.length !== 0 ? <TrackList tracks={props.playlist} type='playlist' removeFromPlaylist={props.removeFromPlaylist} /> : <p>Add songs to your playlist from the search results!</p>}
             <form onSubmit={handleSubmit}>
                 <input type='text' value={props.title} onChange={e => handleUserInput(e.target.value)}></input>
                 <button type="submit" className='hoverScale'>Save Playlist</button>
