@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../styles/SearchBar.module.css';
 
 function SearchBar( props ) {
    function handleUserInput(value) {
@@ -13,7 +12,7 @@ function SearchBar( props ) {
 
    return (
     <>
-        <form className={styles.mainContainer + ' hoverScale'} onSubmit={handleSubmit} >
+        <form  className='hoverScale' onSubmit={handleSubmit} >
             <input type="text" value={props.search} onChange={e => handleUserInput(e.target.value)} ></input>
             <button type='submit'>Search</button>
         </form>

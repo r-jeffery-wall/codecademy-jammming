@@ -13,9 +13,9 @@ function Playlist( props ) {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form className='hoverScale' onSubmit={handleSubmit}>
                 <input type='text' value={props.title} onChange={e => handleUserInput(e.target.value)}></input>
-                <button type="submit" className='hoverScale'>Save Playlist</button>
+                <button type="submit" >Save Playlist</button>
             </form>    
             {props.playlist.length !== 0 ? <TrackList tracks={props.playlist} type='playlist' removeFromPlaylist={props.removeFromPlaylist} /> : <p>Add songs to your playlist from the search results!</p>}
         </>

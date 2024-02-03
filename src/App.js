@@ -40,7 +40,7 @@ function App() {
     alert('Playlist saved to your Spotify account!');
   }
 
-  function handleSearch(searchTerm) { // Unfinished - waiting for API.
+  function handleSearch(searchTerm) { 
     
     if (searchTerm === '' || searchTerm === 'Search here.' || searchTerm === 'You must specify a search term!') {
       setSearch('You must specify a search term!');
