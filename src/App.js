@@ -35,11 +35,9 @@ function App() {
   }
 
   function savePlaylist( playlist, playlistTitle) {
-    const playlistToSave = {
-      name: playlistTitle,
-      playlist: playlist.map(track => track.uri)
-    } 
-    console.log(playlistToSave); // unfinished - waiting for API integration.
+    const Uris = playlist.map(track => track.uri);
+    Spotify.savePlaylist(playlistTitle, Uris).then(setPlaylist([]));
+    alert('Playlist saved to your Spotify account!');
   }
 
   function handleSearch(searchTerm) { // Unfinished - waiting for API.
