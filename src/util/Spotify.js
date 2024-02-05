@@ -1,6 +1,6 @@
 import clientID from "./ClientID";
 
-const redirectUri = 'http://192.168.0.21:3000/';
+const redirectUri = 'http://localhost:3000/';
 let accessToken;
 
 const Spotify = {
@@ -41,7 +41,8 @@ searchTracks(term) {
             title: track.name,
             artist: track.artists[0].name,
             album: track.album.name,
-            uri: track.uri 
+            uri: track.uri,
+            imageSrc: track.album.images[0].url
         }))
     })
 },

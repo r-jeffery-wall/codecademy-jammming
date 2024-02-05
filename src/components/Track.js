@@ -17,6 +17,7 @@ function Track( props ) {
                 <h5 className={styles.artist}>{props.artist}</h5>
                 <p className={styles.album}>{props.album}</p>
             </div>
+            <img src={props.imageSrc} alt={`Albumn art for ${props.album} by ${props.artist}`} />
             {props.type === 'search' ? <button className={styles.button + ' hoverScale'} onClick={handleAdd}>+</button> : <button className={styles.button + ' hoverScale'} onClick={handleRemove} >-</button>}
         </>
     )    

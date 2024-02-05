@@ -6,7 +6,7 @@ function TrackList( props ) {
     <ul> 
         {props.tracks.map(track => 
             <li data-key={track.title} >
-                <Track title={track.title} artist={track.artist} album={track.album} type={props.type}  AddToPlaylist={props.AddToPlaylist} removeFromPlaylist={props.removeFromPlaylist} />
+                <Track title={track.title} artist={track.artist} album={track.album} imageSrc={track.imageSrc} type={props.type}  AddToPlaylist={props.AddToPlaylist} removeFromPlaylist={props.removeFromPlaylist} />
             </li>
         )}
     </ul>
