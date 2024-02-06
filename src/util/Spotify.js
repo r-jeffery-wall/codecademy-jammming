@@ -1,6 +1,6 @@
 import clientID from "./ClientID";
 
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'https://codecademy-jammming-pfwcq11vf-r-jeffery-walls-projects.vercel.app';
 let accessToken;
 
 const Spotify = {
